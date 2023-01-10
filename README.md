@@ -2,8 +2,8 @@
 
 **auto finetuning, svm, parameters, kernel parameter, choose parameters **
 
-The results of non-linear SVM classifications heavily rely on the choose of the kernel hyperparameter, i.e. , \lambda in $k(x,y)=\exp(-\lambda \norm{x-y}²)$ in the kernel function.
-This repository contains an effective algorithmn that calculates an approximate entire solution path of the objective function with respect to the hyperparameter within the interval **[2^{-10},2^{10}]** without numerical issues by which the exact algorithms suffer.
+The results of non-linear SVM classifications heavily rely on the choose of the kernel hyperparameter, i.e. , \lambda in $k(x,y)=\exp(-\lambda \Vert{x-y}\Vert²)$ in the kernel function.
+This repository contains an effective algorithmn that calculates an approximate entire solution path of the objective function with respect to the hyperparameter within the interval $[2^{-10},2^{10}]$ without numerical issues by which the exact algorithms suffer.
 More details can be found in the corresponding [paper][paper]. 
 
 For the matrix calculation the [library Eigen][eigen] was used in combination with [OpenMP][openmp]. The backend solver is [libSVM][libsvm]
